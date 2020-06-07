@@ -2,7 +2,6 @@
     <header>
     {{if eq .Site.Params.useAvatar true}}
         <a href={{ "" | absURL }}><img src="{{ "avatar.png" | absURL }}" alt="avatar"></a>
-        
     {{end}}
 
     <a id="branding" href={{ "" | absURL }}>
@@ -12,6 +11,8 @@
             {{ .Site.Title }}
         {{end}}
     </a>
+    <div>Blog by {{ .Site.Params.author }}</div>
+    <br/>
     </header>
 
     <nav>

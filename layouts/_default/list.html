@@ -1,6 +1,6 @@
 {{ define "main" }}
     <div class="section">
-        <dev class="section-title">{{.Section}}</dev>
+        <dev class="section-title">{{.Section | upper}}</dev>
         {{ range $index, $element := .Paginator.Pages }}
             <div class="list-item">
                 <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>

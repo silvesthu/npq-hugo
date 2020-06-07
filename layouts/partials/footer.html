@@ -1,4 +1,13 @@
 <footer>
+{{- if .Site.Params.utteranc }}
+  <script src="https://utteranc.es/client.js"
+      repo="{{ .Site.Params.utteranc }}"
+      issue-term="pathname"
+      theme="photon-dark"
+      crossorigin="anonymous"
+      async>
+  </script>
+{{- end }}
 <div class="footer-content">
 {{if (or (isset .Site.Params "mail") (isset .Site.Params "phone") ) }}
   <div class="contact-info">

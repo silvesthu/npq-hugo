@@ -4,10 +4,14 @@
     {{else}}
     <div class="spacer"></div>
     {{end}}
+    {{with .Date}}
+       <i class="far fa-calendar-alt"></i> {{.Format "Jan 2 2006"}}
+    {{end}}
     {{ with .Params.githubrepo}}
        github repository : <a href="{{.}}">{{.}}</a>
-    {{end}}  
+    {{end}}
     {{.TableOfContents}}
+    <hr />
     {{.Content}}
     {{if ne .Section ""}}
     <div class="nav-next-prev">
